@@ -1,4 +1,4 @@
-
+<!-- views/teams/new.ejs -->
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -9,13 +9,15 @@
   <body>
     <h1>Add a team!</h1>
     <form action="/teams" method="POST">
+        <label for="city">City:</label>
+        <input type="text" name="city" id="city" />
         <label for="name">Name:</label>
         <input type="text" name="name" id="name" />
-    
         <label for="isReadyForPlayoffs">Ready for Playoffs?</label>
         <input type="checkbox" name="isReady" id="isReadyForPlayoffs" />
     
-        <button type="submit">Add Team</button>
+        <button type="submit">Add NFL Team</button>
     </form>
+    <a href="/teams/">Back to Teams</a>
   </body>
 </html>

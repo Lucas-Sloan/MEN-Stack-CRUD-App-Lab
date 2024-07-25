@@ -1,0 +1,21 @@
+<!-- views/teams/index.ejs -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Teams Index</title>
+  </head>
+  <body>
+    <body>
+        <h1>All Teams</h1>
+        <ul>
+          <% teams.forEach(team => { %>
+            <li><%= `${team.city} ${team.name}`%></li>
+          <% }); %>
+        </ul>
+        <a href="/teams/new">Add New Team</a>
+      </body>
+  </body>
+</html>

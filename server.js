@@ -18,6 +18,12 @@ app.get("/", async (req, res) => {
     res.render("index.ejs");
 });
 
+app.get("/teams", async (req, res) => {
+    const allTeams = await Team.find();
+    console.log(allTeams);
+    res.render("teams/index.ejs", { teams: allTeams });
+});
+
 app.get("/teams/new", (req, res) => {
     res.render("teams/new.ejs");
 });
@@ -29,9 +35,9 @@ app.post("/teams", async (req, res) => {
       req.body.isReadyForPlayoffs = false;
     }
     await Team.create(req.body);
-    res.redirect("/teams/new");
+    res.redirect("/teams");
 });
-  
+
 app.listen(3000, () => {
   console.log("Listening on port 3000");
 });

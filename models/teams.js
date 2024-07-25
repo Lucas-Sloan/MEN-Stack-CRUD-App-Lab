@@ -1,8 +1,9 @@
 const mongoose = require("mongoose");
 
 const teamSchema = new mongoose.Schema({
-    name: String,
-    isReadyForPlayoffs: Boolean,
+    city: { type: String, required: true },
+    name: { type: String, required: true },
+    isReadyForPlayoffs: {type: Boolean},
   });
 
 const Team = mongoose.model("Team", teamSchema);
