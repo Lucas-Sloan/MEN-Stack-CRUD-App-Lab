@@ -1,3 +1,4 @@
+//server.js
 const dotenv = require("dotenv"); // require package
 dotenv.config(); // Loads the environment variables from .env file
 const express = require("express");
@@ -36,6 +37,11 @@ app.post("/teams", async (req, res) => {
     }
     await Team.create(req.body);
     res.redirect("/teams");
+});
+
+app.get("/teams/:teamId", async (req, res) => {
+    const foundTeam = await Team.findById(req.params.teamId);
+    res.render("teams/show.ejs", { team: foundTeam });
 });
 
 app.listen(3000, () => {

@@ -9,10 +9,10 @@
   </head>
   <body>
     <body>
-        <h1>All Teams</h1>
+        <h1>All NFL Teams</h1>
         <ul>
           <% teams.forEach(team => { %>
-            <li><%= `${team.city} ${team.name}`%></li>
+            <li><a href="/teams/<%= team._id %>"><%= `${team.city} ${team.name}`%></a></li>
           <% }); %>
         </ul>
         <a href="/teams/new">Add New Team</a>

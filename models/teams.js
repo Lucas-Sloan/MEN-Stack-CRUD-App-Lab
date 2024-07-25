@@ -1,3 +1,4 @@
+//  models/teams.ejs
 const mongoose = require("mongoose");
 
 const teamSchema = new mongoose.Schema({
