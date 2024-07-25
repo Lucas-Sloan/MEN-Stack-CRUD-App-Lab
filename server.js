@@ -12,13 +12,25 @@ mongoose.connection.on("connected", () => {
 
 const Team = require("./models/teams.js");
 
+app.use(express.urlencoded({ extended: false }));
+
 app.get("/", async (req, res) => {
     res.render("index.ejs");
-  });
+});
 
 app.get("/teams/new", (req, res) => {
     res.render("teams/new.ejs");
-  });
+});
+
+app.post("/teams", async (req, res) => {
+    if (req.body.isReadyForPlayoffs === "on") {
+      req.body.isReadyForPlayoffs = true;
+    } else {
+      req.body.isReadyForPlayoffs = false;
+    }
+    await Team.create(req.body);
+    res.redirect("/teams/new");
+});
   
 app.listen(3000, () => {
   console.log("Listening on port 3000");
