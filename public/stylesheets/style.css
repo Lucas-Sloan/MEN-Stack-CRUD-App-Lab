@@ -187,16 +187,17 @@ li {
     flex-direction: column;
     text-decoration: none;
     color: black;
-    width: 40px;
-    height: 70px;
+    width: 150px;
+    height: 200px;
     background-color: white;
     margin: 10px 15px;
-    padding: 30px 50px;
+    padding: 15px;
     border-radius: 15px;
     align-items: center;
     justify-content: center;
     border: 2.5px solid #013369;
     position: relative;
+    overflow: hidden;
 }
   
 .team-cards:hover {
@@ -245,17 +246,13 @@ img {
 }
 
 .team-cards img {
-    width: 80px;
+    max-width: 80%;
     height: auto;
     margin: 10px 0;
 }
 
 .team-name {
-    position: absolute;
-    top: 10px;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: rgba(255, 255, 255, 0.4);
-    padding: 5px 10px;
-    border-radius: 5px;
+    text-align: center;
+    font-size: 1.2em;
+    width: 100%;
 }
