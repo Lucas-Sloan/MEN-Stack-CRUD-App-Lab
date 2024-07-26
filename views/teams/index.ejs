@@ -13,14 +13,82 @@
       <h1>All NFL Teams</h1>
       <a class="add-team" href="/teams/new">Add New Team</a>
     </div>
-    <ul>
+    <div class="teams-container">
       <% teams.forEach(team => { %>
-      <li>
-        <a class="team-cards" href="/teams/<%= team._id %>">
-          <%= `${team.city} ${team.name}`%>
+        <a href="/teams/<%= team._id %>" class="team-cards">
+          <% if (team.imageUrl) { %>
+            <img src="<%= team.imageUrl %>" alt="<%= team.name %> image" />
+          <% } else if (team.name === "Cardinals") { %>
+            <img src="/views/logos/cardinals.png" alt="Cardinals image" />
+          <% } else if (team.name === "Falcons") { %>
+            <img src="path/to/falcons-image.jpg" alt="Falcons image" />
+          <% } else if (team.name === "Ravens") { %>
+            <img src="path/to/ravens-image.jpg" alt="Ravens image" />
+          <% } else if (team.name === "Bills") { %>
+            <img src="path/to/bills-image.jpg" alt="Bills image" />
+          <% } else if (team.name === "Panthers") { %>
+            <img src="path/to/panthers-image.jpg" alt="Panthers image" />
+          <% } else if (team.name === "Bears") { %>
+            <img src="path/to/bears-image.jpg" alt="Bears image" />
+          <% } else if (team.name === "Bengals") { %>
+            <img src="path/to/bengals-image.jpg" alt="Bengals image" />
+          <% } else if (team.name === "Browns") { %>
+            <img src="path/to/browns-image.jpg" alt="Browns image" />
+          <% } else if (team.name === "Cowboys") { %>
+            <img src="path/to/cowboys-image.jpg" alt="Cowboys image" />
+          <% } else if (team.name === "Broncos") { %>
+            <img src="path/to/broncos-image.jpg" alt="Broncos image" />
+          <% } else if (team.name === "Lions") { %>
+            <img src="path/to/lions-image.jpg" alt="Lions image" />
+          <% } else if (team.name === "Packers") { %>
+            <img src="path/to/packers-image.jpg" alt="Packers image" />
+          <% } else if (team.name === "Texans") { %>
+            <img src="path/to/texans-image.jpg" alt="Texans image" />
+          <% } else if (team.name === "Colts") { %>
+            <img src="path/to/colts-image.jpg" alt="Colts image" />
+          <% } else if (team.name === "Jaguars") { %>
+            <img src="path/to/jaguars-image.jpg" alt="Jaguars image" />
+          <% } else if (team.name === "Chiefs") { %>
+            <img src="path/to/chiefs-image.jpg" alt="Chiefs image" />
+          <% } else if (team.name === "Raiders") { %>
+            <img src="path/to/raiders-image.jpg" alt="Raiders image" />
+          <% } else if (team.name === "Chargers") { %>
+            <img src="path/to/chargers-image.jpg" alt="Chargers image" />
+          <% } else if (team.name === "Rams") { %>
+            <img src="path/to/rams-image.jpg" alt="Rams image" />
+          <% } else if (team.name === "Dolphins") { %>
+            <img src="path/to/dolphins-image.jpg" alt="Dolphins image" />
+          <% } else if (team.name === "Vikings") { %>
+            <img src="path/to/vikings-image.jpg" alt="Vikings image" />
+          <% } else if (team.name === "Patriots") { %>
+            <img src="path/to/patriots-image.jpg" alt="Patriots image" />
+          <% } else if (team.name === "Saints") { %>
+            <img src="path/to/saints-image.jpg" alt="Saints image" />
+          <% } else if (team.name === "Giants") { %>
+            <img src="path/to/giants-image.jpg" alt="Giants image" />
+          <% } else if (team.name === "Jets") { %>
+            <img src="path/to/jets-image.jpg" alt="Jets image" />
+          <% } else if (team.name === "Eagles") { %>
+            <img src="path/to/eagles-image.jpg" alt="Eagles image" />
+          <% } else if (team.name === "Steelers") { %>
+            <img src="path/to/steelers-image.jpg" alt="Steelers image" />
+          <% } else if (team.name === "49ers") { %>
+            <img src="path/to/49ers-image.jpg" alt="49ers image" />
+          <% } else if (team.name === "Seahawks") { %>
+            <img src="path/to/seahawks-image.jpg" alt="Seahawks image" />
+          <% } else if (team.name === "Buccaneers") { %>
+            <img src="path/to/buccaneers-image.jpg" alt="Buccaneers image" />
+          <% } else if (team.name === "Titans") { %>
+            <img src="path/to/titans-image.jpg" alt="Titans image" />
+          <% } else if (team.name === "Commanders") { %>
+            <img src="path/to/commanders-image.jpg" alt="Commanders image" />
+          <% } else { %>
+            <p>No image available</p>
+          <% } %>
+          <h2 class="team-name"><%= team.city %> <%= team.name %></h2>
         </a>
-      </li>
-      <% }); %>
+      <% }) %>
+    </div>
     </ul>
   </body>
 </html>
