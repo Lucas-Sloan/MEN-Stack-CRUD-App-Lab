@@ -18,6 +18,8 @@
       <button type="submit">Delete <%= `${team.city} ${team.name}`%></button>
     </form>
     <a href="/teams/<%= team._id %>/edit">Edit <%= `${team.city} ${team.name}`%></a>
-    <a href="/teams/">Back to Teams</a>
+    <a class="teams-index-link" href="/teams/">
+      <div class= "index-link-text">Back to Teams</div>
+    </a>
   </body>
 </html>
