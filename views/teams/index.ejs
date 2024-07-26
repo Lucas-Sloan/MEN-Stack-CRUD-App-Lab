@@ -9,14 +9,18 @@
     <title>Teams Index</title>
   </head>
   <body>
-    <body>
-        <h1>All NFL Teams</h1>
-        <ul>
-          <% teams.forEach(team => { %>
-            <li><a href="/teams/<%= team._id %>"><%= `${team.city} ${team.name}`%></a></li>
-          <% }); %>
-        </ul>
-        <a href="/teams/new">Add New Team</a>
-      </body>
+    <div class="index-header-div">
+      <h1>All NFL Teams</h1>
+      <a class="add-team" href="/teams/new">Add New Team</a>
+    </div>
+    <ul>
+      <% teams.forEach(team => { %>
+      <li>
+        <a class="team-cards" href="/teams/<%= team._id %>">
+          <%= `${team.city} ${team.name}`%>
+        </a>
+      </li>
+      <% }); %>
+    </ul>
   </body>
 </html>
