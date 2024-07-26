@@ -4,6 +4,8 @@ dotenv.config(); // Loads the environment variables from .env file
 const express = require("express");
 const mongoose = require("mongoose"); // require package
 const app = express();
+const methodOverride = require("method-override");
+const morgan = require("morgan");
 
 mongoose.connect(process.env.MONGODB_URI);
 // log connection status to terminal on start
@@ -14,6 +16,8 @@ mongoose.connection.on("connected", () => {
 const Team = require("./models/teams.js");
 
 app.use(express.urlencoded({ extended: false }));
+app.use(methodOverride("_method"));
+app.use(morgan("dev")); 
 
 app.get("/", async (req, res) => {
     res.render("index.ejs");
@@ -42,6 +46,11 @@ app.post("/teams", async (req, res) => {
 app.get("/teams/:teamId", async (req, res) => {
     const foundTeam = await Team.findById(req.params.teamId);
     res.render("teams/show.ejs", { team: foundTeam });
+});
+
+app.delete("/teams/:teamId", async (req, res) => {
+  await Team.findByIdAndDelete(req.params.teamId);
+  res.redirect("/teams");
 });
 
 app.listen(3000, () => {

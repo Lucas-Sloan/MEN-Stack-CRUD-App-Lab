@@ -13,6 +13,9 @@
     <% } else { %>
         <p>This team is not ready for Playoffs!</p>
     <% } %>
+    <form action="/teams/<%=team._id%>?_method=DELETE" method="POST">
+      <button type="submit">Delete <%= team.name %></button>
+    </form>
     <a href="/teams/">Back to Teams</a>
   </body>
 </html>
