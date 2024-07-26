@@ -22,6 +22,41 @@ app.use(morgan("dev"));
 
 app.use(express.static(path.join(__dirname, "public")))
 
+const teamImageMap = {
+  "cardinals": "/images/cardinals.png",
+  "falcons": "/images/falcons.png",
+  "ravens": "/images/ravens.png",
+  "bills": "/images/bills.png",
+  "panthers": "/images/panthers.png",
+  "bears": "/images/bears.png",
+  "bengals": "/images/bengals.png",
+  "browns": "/images/browns.png",
+  "cowboys": "/images/cowboys.png",
+  "broncos": "/images/broncos.png",
+  "lions": "/images/lions.jpg",
+  "packers": "/images/packers.jpg",
+  "texans": "/images/texans.png",
+  "colts": "/images/colts.jpg",
+  "jaguars": "/images/jaguars.png",
+  "chiefs": "/images/chiefs.jpg",
+  "raiders": "/images/raiders.png",
+  "chargers": "/images/chargers.png",
+  "rams": "/images/rams.jpg",
+  "dolphins": "/images/dolphins.png",
+  "vikings": "/images/vikings.jpg",
+  "patriots": "/images/patriots.jpg",
+  "saints": "/images/saints.png",
+  "giants": "/images/giants.png",
+  "jets": "/images/jets.png",
+  "eagles": "/images/eagles.png",
+  "steelers": "/images/steelers.png",
+  "49ers": "/images/49ers.png",
+  "seahawks": "/images/seahawks.png",
+  "buccaneers": "/images/buccaneers.png",
+  "titans": "/images/titans.png",
+  "commanders": "/images/commanders.png",
+};
+
 app.get("/", async (req, res) => {
     res.render("index.ejs");
 });
@@ -37,13 +72,26 @@ app.get("/teams/new", (req, res) => {
 });
 
 app.post("/teams", async (req, res) => {
-    if (req.body.isReadyForPlayoffs === "on") {
-      req.body.isReadyForPlayoffs = true;
-    } else {
-      req.body.isReadyForPlayoffs = false;
-    }
-    await Team.create(req.body);
-    res.redirect("/teams");
+  try {
+      req.body.isReadyForPlayoffs = req.body.isReadyForPlayoffs === "on";
+
+      const teamNameLower = req.body.name.toLowerCase();
+      const imageUrl = teamImageMap[teamNameLower] || '/images/default.png';
+
+      const newTeam = {
+          city: req.body.city,
+          name: req.body.name,
+          imageUrl: imageUrl,
+          isReadyForPlayoffs: req.body.isReadyForPlayoffs
+      };
+
+      await Team.create(newTeam);
+
+      res.redirect("/teams");
+  } catch (err) {
+      console.error("Error adding team:", err);
+      res.status(500).send("Internal Server Error");
+  }
 });
 
 app.get("/teams/:teamId", async (req, res) => {

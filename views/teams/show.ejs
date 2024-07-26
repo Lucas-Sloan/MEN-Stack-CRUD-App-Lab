@@ -10,6 +10,12 @@
   <body>
     <div class="team-details">
       <h1><%= `${team.city} ${team.name}`%></h1>
+      <% if (team.imageUrl) { %>
+        <img src="<%= team.imageUrl %>" alt="<%= `${team.city} ${team.name}` %> image" class="team-image"/>
+      <% } else { %>
+        <p>No image available</p>
+      <% } %>
+
       <% if (team.isReadyForPlayoffs) { %>
           <p>This team is ready for Playoffs!</p>
       <% } else { %>
