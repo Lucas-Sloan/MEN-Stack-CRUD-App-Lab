@@ -8,16 +8,28 @@
     <title><%= `${team.city} ${team.name}`%></title>
   </head>
   <body>
-    <h1><%= `${team.city} ${team.name}`%></h1>
-    <% if (team.isReadyForPlayoffs) { %>
-        <p>This team is ready for Playoffs!</p>
-    <% } else { %>
-        <p>This team is not ready for Playoffs!</p>
-    <% } %>
-    <form action="/teams/<%=team._id%>?_method=DELETE" method="POST">
-      <button type="submit">Delete <%= `${team.city} ${team.name}`%></button>
-    </form>
-    <a href="/teams/<%= team._id %>/edit">Edit <%= `${team.city} ${team.name}`%></a>
+    <div class="team-details">
+      <h1><%= `${team.city} ${team.name}`%></h1>
+      <% if (team.isReadyForPlayoffs) { %>
+          <p>This team is ready for Playoffs!</p>
+      <% } else { %>
+          <p>This team is not ready for Playoffs!</p>
+      <% } %>
+    </div>
+    <div class="team-actions">
+      <form
+        class="delete-form" 
+        action="/teams/<%=team._id%>?_method=DELETE" 
+        method="POST"
+      >
+        <button class="delete-button" type="submit">
+          Delete <%= `${team.city} ${team.name}`%>
+        </button>
+      </form>
+      <a class="edit-link" href="/teams/<%= team._id %>/edit">
+        <div class="edit-text">Edit <%= `${team.city} ${team.name}`%></div>
+      </a>
+    </div>
     <a class="teams-index-link" href="/teams/">
       <div class= "index-link-text">Back to Teams</div>
     </a>
