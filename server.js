@@ -60,6 +60,18 @@ app.get("/teams/:teamId/edit", async (req, res) => {
   });
 });
 
+app.put("/teams/:teamId", async (req, res) => {
+  if (req.body.isReadyForPlayoffs === "on") {
+    req.body.isReadyForPlayoffs = true;
+  } else {
+    req.body.isReadyForPlayoffs = false;
+  }
+  
+  await Team.findByIdAndUpdate(req.params.teamId, req.body);
+
+  res.redirect(`/teams/${req.params.teamId}`);
+});
+
 app.listen(3000, () => {
   console.log("Listening on port 3000");
 });
