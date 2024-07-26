@@ -6,6 +6,7 @@ const mongoose = require("mongoose"); // require package
 const app = express();
 const methodOverride = require("method-override");
 const morgan = require("morgan");
+const path = require("path");
 
 mongoose.connect(process.env.MONGODB_URI);
 // log connection status to terminal on start
@@ -18,6 +19,8 @@ const Team = require("./models/teams.js");
 app.use(express.urlencoded({ extended: false }));
 app.use(methodOverride("_method"));
 app.use(morgan("dev")); 
+
+app.use(express.static(path.join(__dirname, "public")))
 
 app.get("/", async (req, res) => {
     res.render("index.ejs");
