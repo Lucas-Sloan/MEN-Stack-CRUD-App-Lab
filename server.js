@@ -53,6 +53,13 @@ app.delete("/teams/:teamId", async (req, res) => {
   res.redirect("/teams");
 });
 
+app.get("/teams/:teamId/edit", async (req, res) => {
+  const foundTeam = await Team.findById(req.params.teamId);
+  res.render("teams/edit.ejs", {
+    team: foundTeam,
+  });
+});
+
 app.listen(3000, () => {
   console.log("Listening on port 3000");
 });

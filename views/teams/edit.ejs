@@ -1,0 +1,23 @@
+<!-- views/teams/edit.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Edit <%= `${team.city} ${team.name}`%></title>
+  </head>
+  <body>
+    <h1>Edit <%= `${team.city} ${team.name}`%></h1>
+    <form action="/teams/<%=team._id%>?_method=PUT" method="POST">
+        <label for="city">City:</label>
+        <input type="text" name="city" id="city" value="<%= team.city %>" />
+        <label for="name">Name:</label>
+        <input type="text" name="name" id="city" value="<%= team.name %>" />
+        <label for="isReadyForPlayoffs">Ready for Playoffs?</label>
+        <input type="checkbox" name="isReadyForPlayoffs" id="isReadyForPlayoffs" <% if (team.isReadyForPlayoffs) { %>checked<% } %> />
+    
+        <button type="submit">Update NFL Team</button>
+    </form>
+    <a href="/teams/">Back to Teams</a>
+  </body>
+</html>
