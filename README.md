@@ -39,11 +39,11 @@
 
   | Description       | Screenshot                                                |
   |:-----------------:|-----------------------------------------------------------|
-  | <h3>Landing Page</h3>  | <img src="images/landing-page.png" width="700" />       |
-  | <h3>Team Page</h3> | <img src="images/all-teams.png" width="700" /> |
-  | <h3>Show Page</h3> | <img src="images/show-page.png" width="700" /> |
-  | <h3>Add Page</h3> | <img src="images/add-page.png" width="700" /> |
-  | <h3>Edit Page</h3> | <img src="images/edit-page.png" width="700" /> |
+  | <h3>Landing Page</h3>  | <img src="public/images/landing-page.png" width="700" />       |
+  | <h3>Team Page</h3> | <img src="public/images/all-teams.png" width="700" /> |
+  | <h3>Show Page</h3> | <img src="public/images/show-page.png" width="700" /> |
+  | <h3>Add Page</h3> | <img src="public/images/add-page.png" width="700" /> |
+  | <h3>Edit Page</h3> | <img src="public/images/edit-page.png" width="700" /> |
 
 
 
@@ -59,157 +59,157 @@
   
 <details>
   <summary>Cardinals</summary>
-  <img src="images/cardinals.png" alt="Cardinals Logo" />
+  <img src="public/images/cardinals.png" alt="Cardinals Logo" />
 </details>
 
 <details>
   <summary>Falcons</summary>
-  <img src="images/falcons.png" alt="Falcons Logo" />
+  <img src="public/images/falcons.png" alt="Falcons Logo" />
 </details>
 
 <details>
   <summary>Ravens</summary>
-  <img src="images/ravens.png" alt="Ravens Logo" />
+  <img src="public/images/ravens.png" alt="Ravens Logo" />
 </details>
 
 <details>
   <summary>Panthers</summary>
-  <img src="images/panthers.png" alt="Panthers Logo" />
+  <img src="public/images/panthers.png" alt="Panthers Logo" />
 </details>
 
 <details>
   <summary>Bears</summary>
-  <img src="images/bears.png" alt="Bears Logo" />
+  <img src="public/images/bears.png" alt="Bears Logo" />
 </details>
 
 <details>
   <summary>Bengals</summary>
-  <img src="images/bengals.png" alt="Bengals Logo" />
+  <img src="public/images/bengals.png" alt="Bengals Logo" />
 </details>
 
 <details>
   <summary>Browns</summary>
-  <img src="images/browns.png" alt="Browns Logo" />
+  <img src="public/images/browns.png" alt="Browns Logo" />
 </details>
 
 <details>
   <summary>Cowboys</summary>
-  <img src="images/cowboys.png" alt="Cowboys Logo" />
+  <img src="public/images/cowboys.png" alt="Cowboys Logo" />
 </details>
 
 <details>
   <summary>Broncos</summary>
-  <img src="images/broncos.png" alt="Broncos Logo" />
+  <img src="public/images/broncos.png" alt="Broncos Logo" />
 </details>
 
 <details>
   <summary>Lions</summary>
-  <img src="images/lions.jpg" alt="Lions Logo" />
+  <img src="public/images/lions.jpg" alt="Lions Logo" />
 </details>
 
 <details>
   <summary>Packers</summary>
-  <img src="images/packers.jpg" alt="Packers Logo" />
+  <img src="public/images/packers.jpg" alt="Packers Logo" />
 </details>
 
 <details>
   <summary>Texans</summary>
-  <img src="images/texans.png" alt="Texans Logo" />
+  <img src="public/images/texans.png" alt="Texans Logo" />
 </details>
 
 <details>
   <summary>Colts</summary>
-  <img src="images/colts.jpg" alt="Colts Logo" />
+  <img src="public/images/colts.jpg" alt="Colts Logo" />
 </details>
 
 <details>
   <summary>Jaguars</summary>
-  <img src="images/jaguars.png" alt="Jaguars Logo" />
+  <img src="public/images/jaguars.png" alt="Jaguars Logo" />
 </details>
 
 <details>
   <summary>Chiefs</summary>
-  <img src="images/chiefs.jpg" alt="Chiefs Logo" />
+  <img src="public/images/chiefs.jpg" alt="Chiefs Logo" />
 </details>
 
 <details>
   <summary>Raiders</summary>
-  <img src="images/raiders.png" alt="Raiders Logo" />
+  <img src="public/images/raiders.png" alt="Raiders Logo" />
 </details>
 
 <details>
   <summary>Chargers</summary>
-  <img src="images/chargers.png" alt="Chargers Logo" />
+  <img src="public/images/chargers.png" alt="Chargers Logo" />
 </details>
 
 <details>
   <summary>Rams</summary>
-  <img src="images/rams.jpg" alt="Rams Logo" />
+  <img src="public/images/rams.jpg" alt="Rams Logo" />
 </details>
 
 <details>
   <summary>Dolphins</summary>
-  <img src="images/dolphins.png" alt="Dolphins Logo" />
+  <img src="public/images/dolphins.png" alt="Dolphins Logo" />
 </details>
 
 <details>
   <summary>Vikings</summary>
-  <img src="images/vikings.jpg" alt="Vikings Logo" />
+  <img src="public/images/vikings.jpg" alt="Vikings Logo" />
 </details>
 
 <details>
   <summary>Patriots</summary>
-  <img src="images/patriots.jpg" alt="Patriots Logo" />
+  <img src="public/images/patriots.jpg" alt="Patriots Logo" />
 </details>
 
 <details>
   <summary>Saints</summary>
-  <img src="images/saints.png" alt="Saints Logo" />
+  <img src="public/images/saints.png" alt="Saints Logo" />
 </details>
 
 <details>
   <summary>Giants</summary>
-  <img src="images/giants.png" alt="Giants Logo" />
+  <img src="public/images/giants.png" alt="Giants Logo" />
 </details>
 
 <details>
   <summary>Jets</summary>
-  <img src="images/jets.png" alt="Jets Logo" />
+  <img src="public/images/jets.png" alt="Jets Logo" />
 </details>
 
 <details>
   <summary>Eagles</summary>
-  <img src="images/eagles.png" alt="Eagles Logo" />
+  <img src="public/images/eagles.png" alt="Eagles Logo" />
 </details>
 
 <details>
   <summary>Steelers</summary>
-  <img src="images/steelers.png" alt="Steelers Logo" />
+  <img src="public/images/steelers.png" alt="Steelers Logo" />
 </details>
 
 <details>
   <summary>49ers</summary>
-  <img src="images/49ers.png" alt="49ers Logo" />
+  <img src="public/images/49ers.png" alt="49ers Logo" />
 </details>
 
 <details>
   <summary>Seahawks</summary>
-  <img src="images/seahawks.png" alt="Seahawks Logo" />
+  <img src="public/images/seahawks.png" alt="Seahawks Logo" />
 </details>
 
 <details>
   <summary>Buccaneers</summary>
-  <img src="images/buccaneers.png" alt="Buccaneers Logo" />
+  <img src="public/images/buccaneers.png" alt="Buccaneers Logo" />
 </details>
 
 <details>
   <summary>Titans</summary>
-  <img src="images/titans.png" alt="Titans Logo" />
+  <img src="public/images/titans.png" alt="Titans Logo" />
 </details>
 
 <details>
   <summary>Commanders</summary>
-  <img src="images/commanders.png" alt="Commanders Logo" />
+  <img src="public/images/commanders.png" alt="Commanders Logo" />
 </details>
 
 
