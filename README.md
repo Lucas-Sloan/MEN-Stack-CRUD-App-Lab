@@ -23,7 +23,6 @@
  - Add New Teams: Users can add new NFL teams by providing details such as city, name, and playoff readiness. The app will automatically assign an image based on the team’s name.
  - Edit Team Information: Users can update the details of existing teams, including city, name, and playoff readiness.
  - Delete Teams: Users can remove teams from the list if they are no longer relevant or needed.
- - Delete Teams: Users can remove teams from the list if they are no longer relevant or needed.
 
  ## :mountain: Background
 
